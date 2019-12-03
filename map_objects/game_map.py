@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 from random import randint
 
 from map_objects.tile import Tile
 from map_objects.rectangle import Rect
-=======
-from map_objects.tile import Tile
->>>>>>> master
 
 
 class GameMap:
@@ -15,7 +11,6 @@ class GameMap:
         self.tiles = self.initialize_tiles()
     
     def initialize_tiles(self):
-<<<<<<< HEAD
         tiles = [[Tile(True) for y in range(self.height)] for x in range(self.width)]
 
 
@@ -91,19 +86,6 @@ class GameMap:
             self.tiles[x][y].blocked = False
             self.tiles[x][y].block_sight = False
     
-=======
-        tiles = [[Tile(False) for y in range(self.height)] for x in range(self.width)]
-
-        tiles[30][22].blocked = True
-        tiles[30][22].block_sight = True
-        tiles[31][22].blocked = True
-        tiles[31][22].block_sight = True
-        tiles[32][22].blocked = True
-        tiles[32][22].block_sight = True
-
-        return tiles
-    
->>>>>>> master
     def is_blocked(self, x, y):
         if self.tiles[x][y].blocked:
             return True
